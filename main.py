@@ -48,14 +48,15 @@ def predict():
         }
         page = 'prediction.html'
     except:
-        info = {
-            'Title': 'Invalid Inputs Try again',
-            'data': {
-                'Pclass': 'Must be an integer',
-                'Age': 'Must be an integer',
-                'Fare': 'Must be a float'
-            }
-        }
+        #info = {
+        #    'Title': 'Invalid Inputs Try again',
+        #    'data': {
+        #        'Pclass': 'Must be an integer',
+        #        'Age': 'Must be an integer',
+        #       'Fare': 'Must be a float'
+        #   }
+        #}
+        info = 'Fail'
         page = 'index.html'
     return render_template(page, data=info)
 
